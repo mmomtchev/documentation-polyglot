@@ -48,21 +48,28 @@ function normalize(result) {
 
 test('specifying the plugin on the command-line', async function () {
   const data = await documentation([
-    `build ${fixture}/infered.js ${fixture}/simple.input.js ${fixture}/blend.cpp --plugin=${plugin}`
+    `build ${fixture}/inferred.js ${fixture}/simple.input.js ${fixture}/blend.cpp --plugin=${plugin}`
   ]);
   expect(normalize(data)).toMatchSnapshot();
 });
 
 test('specifying the plugin via a config file', async function () {
   const data = await documentation([
-    `build ${fixture}/infered.js ${fixture}/simple.input.js ${fixture}/blend.cpp --config=${fixture}/polyglot.yml`
+    `build ${fixture}/inferred.js ${fixture}/simple.input.js ${fixture}/blend.cpp --config=${fixture}/polyglot.yml`
   ]);
   expect(normalize(data)).toMatchSnapshot();
 });
 
 test('specifying extensions in a config file', async function () {
   const data = await documentation([
-    `build ${fixture}/infered.js ${fixture}/simple.input.js ${fixture}/blend.cpp --config=${fixture}/noext.yml`
+    `build ${fixture}/inferred.js ${fixture}/simple.input.js ${fixture}/blend.cpp --config=${fixture}/noext.yml`
+  ]);
+  expect(normalize(data)).toMatchSnapshot();
+});
+
+test('extracting information from Node::Nan annotations', async function () {
+  const data = await documentation([
+    `build ${fixture}/inferred.js ${fixture}/simple.input.js ${fixture}/blend.cpp --plugin=${plugin} --config=${fixture}/nan.yml`
   ]);
   expect(normalize(data)).toMatchSnapshot();
 });

@@ -64,6 +64,13 @@ static bool hexToUInt32Color(char *hex, unsigned int & value) {
     }
 }
 
+/**
+ * This is a JS-accessible Node::Nan method that transforms RGB to HSL
+ * @param {number} r
+ * @param {number} g
+ * @param {number} b
+ * @returns {number[]} hsl
+ */
 NAN_METHOD(rgb2hsl) {
     NanScope();
     if (args.Length() != 3) {

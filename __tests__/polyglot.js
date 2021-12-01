@@ -27,7 +27,8 @@ test('polyglot', function () {
   }, config, pluginAPI);
   delete result[0].context.file;
   delete result[0].context.sortKey;
-  expect(result).toEqual([
+  expect(result.length).toEqual(2);
+  expect(result[0]).toEqual(
     {
       errors: [],
       augments: [],
@@ -93,8 +94,8 @@ test('polyglot', function () {
         }
       ]
     }
-  ]);
-  
+  );
+
   expect(shallow(files[1])).toBeFalsy();
   const jsresult = parse({
     file: files[1],

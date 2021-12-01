@@ -64,7 +64,7 @@ function getComments(source) {
  * @param api documentation hooks
  * @return {Array<Object>} adds to memo
  */
-export function parse(sourceFile, _config, api) {
+export function parse(sourceFile, config, api) {
     if (!pluginConfig.extensions.includes(path.extname(sourceFile.file)))
         return false;
 
@@ -76,6 +76,9 @@ export function parse(sourceFile, _config, api) {
                 file: sourceFile.file,
                 sortKey: sourceFile.file + ' ' + comment.loc.start.line
             };
+            if (config && config['documentation-polyglot'] && config['documentation-polyglot'].infer) {
+                Object.assign(context, infer(comment.after, config));
+            }
             return api.parseJSDoc(comment.value, comment.loc, context);
         });
 }
@@ -92,4 +95,42 @@ export function shallow(file, _config, _api) {
     if (pluginConfig.extensions.includes(path.extname(file)))
         return true;
     return false;
+}
+
+/**
+ * Infer context using user-supplied RegExps
+ * 
+ * @param {string} context
+ * @param {object} config
+ */
+function infer(context, config) {
+    const tags = {};
+
+    const elements = Object.keys(config['documentation-polyglot'].infer);
+    for (const el of elements) {
+        // patterns can be
+        // 1. an array of regexps with a single capturing group
+        // 2. an object with key:regexp pairs
+        const patterns = config['documentation-polyglot'].infer[el];
+
+        if (patterns instanceof Array) {
+            for (const p of patterns) {
+                const regex = new RegExp(p);
+                const r = context.match(regex);
+                if (r) {
+                    tags[el] = r[1];
+                }
+            }
+        } else {
+            for (const p of Object.keys(patterns)) {
+                for (const re of patterns[p]) {
+                    const regex = new RegExp(re);
+                    if (context.match(regex))
+                        tags[el] = p;
+                }
+            }
+        }
+    }
+
+    return tags;
 }

@@ -63,3 +63,16 @@ plugin:
 documentation-polyglot:
   extensions: [ .cpp ]
 ```
+
+## Extracting information from C++ code
+
+An example for extracting names of `Node::Nan` methods
+
+```yml
+documentation-polyglot:
+  extensions: [ .cpp ]
+  infer:
+    kind:
+      method: [ NAN_METHOD\(.*\) ]
+    name: [ NAN_METHOD\s*\((.*)\) ]
+```
