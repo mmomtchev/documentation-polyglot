@@ -1,0 +1,5 @@
+plugin:
+  - ../../../index.js
+
+documentation-polyglot:
+  extensions: [ .js, .cpp ]

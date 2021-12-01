@@ -1,0 +1,1056 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`specifying extensions in a config file 1`] = `
+Array [
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 40,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 35,
+        },
+      },
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "This method moves a hex to a color",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 40,
+      },
+      "start": Object {
+        "column": 3,
+        "line": 35,
+      },
+    },
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "hexToUInt32Color",
+    "namespace": "hexToUInt32Color",
+    "params": Array [
+      Object {
+        "lineNumber": 3,
+        "name": "hex",
+        "title": "param",
+        "type": Object {
+          "name": "string",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "path": Array [
+      Object {
+        "name": "hexToUInt32Color",
+      },
+    ],
+    "properties": Array [],
+    "returns": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "color",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "title": "returns",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": null,
+        "lineNumber": 2,
+        "name": "hexToUInt32Color",
+        "title": "name",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 3,
+        "name": "hex",
+        "title": "param",
+        "type": Object {
+          "name": "string",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": "color",
+        "lineNumber": 4,
+        "title": "returns",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "throws": Array [],
+    "todos": Array [],
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 6,
+        },
+        "start": Object {
+          "column": 2,
+          "line": 1,
+        },
+      },
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Add five to ",
+            },
+            Object {
+              "type": "inlineCode",
+              "value": "x",
+            },
+            Object {
+              "type": "text",
+              "value": ".",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 6,
+      },
+      "start": Object {
+        "column": 2,
+        "line": 1,
+      },
+    },
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "namespace": "",
+    "params": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "The number to add five to.",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "lineNumber": 3,
+        "name": "x",
+        "title": "param",
+      },
+    ],
+    "path": Array [],
+    "properties": Array [],
+    "returns": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "x plus five.",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "title": "returns",
+      },
+    ],
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": "The number to add five to.",
+        "lineNumber": 3,
+        "name": "x",
+        "title": "param",
+        "type": null,
+      },
+      Object {
+        "description": "x plus five.",
+        "lineNumber": 4,
+        "title": "returns",
+        "type": null,
+      },
+    ],
+    "throws": Array [],
+    "todos": Array [],
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 4,
+        },
+        "start": Object {
+          "column": 2,
+          "line": 1,
+        },
+      },
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "This function returns the number one.",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 4,
+      },
+      "start": Object {
+        "column": 2,
+        "line": 1,
+      },
+    },
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "namespace": "",
+    "params": Array [],
+    "path": Array [],
+    "properties": Array [],
+    "returns": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "numberone",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "title": "returns",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": "numberone",
+        "lineNumber": 2,
+        "title": "returns",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "throws": Array [],
+    "todos": Array [],
+    "yields": Array [],
+  },
+]
+`;
+
+exports[`specifying the plugin on the command-line 1`] = `
+Array [
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 9,
+        },
+        "start": Object {
+          "column": 0,
+          "line": 7,
+        },
+      },
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Add five to ",
+            },
+            Object {
+              "type": "inlineCode",
+              "value": "x",
+            },
+            Object {
+              "type": "text",
+              "value": ".",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "kind": "function",
+    "loc": Object {
+      "end": Object {
+        "column": 3,
+        "line": 6,
+      },
+      "start": Object {
+        "column": 0,
+        "line": 1,
+      },
+    },
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "addFive",
+    "namespace": "addFive",
+    "params": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "The number to add five to.",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "lineNumber": 3,
+        "name": "x",
+        "title": "param",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "path": Array [
+      Object {
+        "kind": "function",
+        "name": "addFive",
+      },
+    ],
+    "properties": Array [],
+    "returns": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "x plus five.",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "title": "returns",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": "The number to add five to.",
+        "lineNumber": 3,
+        "name": "x",
+        "title": "param",
+        "type": null,
+      },
+      Object {
+        "description": "x plus five.",
+        "lineNumber": 4,
+        "title": "returns",
+        "type": null,
+      },
+    ],
+    "throws": Array [],
+    "todos": Array [],
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 8,
+        },
+        "start": Object {
+          "column": 0,
+          "line": 5,
+        },
+      },
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "This function returns the number one.",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "kind": "function",
+    "loc": Object {
+      "end": Object {
+        "column": 3,
+        "line": 4,
+      },
+      "start": Object {
+        "column": 0,
+        "line": 1,
+      },
+    },
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "simple.input",
+    "namespace": "simple.input",
+    "params": Array [],
+    "path": Array [
+      Object {
+        "kind": "function",
+        "name": "simple.input",
+      },
+    ],
+    "properties": Array [],
+    "returns": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "numberone",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "title": "returns",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": "numberone",
+        "lineNumber": 2,
+        "title": "returns",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "throws": Array [],
+    "todos": Array [],
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 40,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 35,
+        },
+      },
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "This method moves a hex to a color",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 40,
+      },
+      "start": Object {
+        "column": 3,
+        "line": 35,
+      },
+    },
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "hexToUInt32Color",
+    "namespace": "hexToUInt32Color",
+    "params": Array [
+      Object {
+        "lineNumber": 3,
+        "name": "hex",
+        "title": "param",
+        "type": Object {
+          "name": "string",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "path": Array [
+      Object {
+        "name": "hexToUInt32Color",
+      },
+    ],
+    "properties": Array [],
+    "returns": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "color",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "title": "returns",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": null,
+        "lineNumber": 2,
+        "name": "hexToUInt32Color",
+        "title": "name",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 3,
+        "name": "hex",
+        "title": "param",
+        "type": Object {
+          "name": "string",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": "color",
+        "lineNumber": 4,
+        "title": "returns",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "throws": Array [],
+    "todos": Array [],
+    "yields": Array [],
+  },
+]
+`;
+
+exports[`specifying the plugin via a config file 1`] = `
+Array [
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 9,
+        },
+        "start": Object {
+          "column": 0,
+          "line": 7,
+        },
+      },
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Add five to ",
+            },
+            Object {
+              "type": "inlineCode",
+              "value": "x",
+            },
+            Object {
+              "type": "text",
+              "value": ".",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "kind": "function",
+    "loc": Object {
+      "end": Object {
+        "column": 3,
+        "line": 6,
+      },
+      "start": Object {
+        "column": 0,
+        "line": 1,
+      },
+    },
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "addFive",
+    "namespace": "addFive",
+    "params": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "The number to add five to.",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "lineNumber": 3,
+        "name": "x",
+        "title": "param",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "path": Array [
+      Object {
+        "kind": "function",
+        "name": "addFive",
+      },
+    ],
+    "properties": Array [],
+    "returns": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "x plus five.",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "title": "returns",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": "The number to add five to.",
+        "lineNumber": 3,
+        "name": "x",
+        "title": "param",
+        "type": null,
+      },
+      Object {
+        "description": "x plus five.",
+        "lineNumber": 4,
+        "title": "returns",
+        "type": null,
+      },
+    ],
+    "throws": Array [],
+    "todos": Array [],
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 8,
+        },
+        "start": Object {
+          "column": 0,
+          "line": 5,
+        },
+      },
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "This function returns the number one.",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "kind": "function",
+    "loc": Object {
+      "end": Object {
+        "column": 3,
+        "line": 4,
+      },
+      "start": Object {
+        "column": 0,
+        "line": 1,
+      },
+    },
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "simple.input",
+    "namespace": "simple.input",
+    "params": Array [],
+    "path": Array [
+      Object {
+        "kind": "function",
+        "name": "simple.input",
+      },
+    ],
+    "properties": Array [],
+    "returns": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "numberone",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "title": "returns",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": "numberone",
+        "lineNumber": 2,
+        "title": "returns",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "throws": Array [],
+    "todos": Array [],
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 40,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 35,
+        },
+      },
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "This method moves a hex to a color",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 40,
+      },
+      "start": Object {
+        "column": 3,
+        "line": 35,
+      },
+    },
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "hexToUInt32Color",
+    "namespace": "hexToUInt32Color",
+    "params": Array [
+      Object {
+        "lineNumber": 3,
+        "name": "hex",
+        "title": "param",
+        "type": Object {
+          "name": "string",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "path": Array [
+      Object {
+        "name": "hexToUInt32Color",
+      },
+    ],
+    "properties": Array [],
+    "returns": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "color",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "title": "returns",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": null,
+        "lineNumber": 2,
+        "name": "hexToUInt32Color",
+        "title": "name",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 3,
+        "name": "hex",
+        "title": "param",
+        "type": Object {
+          "name": "string",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": "color",
+        "lineNumber": 4,
+        "title": "returns",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "throws": Array [],
+    "todos": Array [],
+    "yields": Array [],
+  },
+]
+`;

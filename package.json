@@ -1,0 +1,46 @@
+{
+  "name": "documentation-polyglot",
+  "version": "1.0.0",
+  "description": "C++ plugin for documentation.js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "fixture"
+    ],
+    "transform": {},
+    "collectCoverage": true,
+    "testEnvironment": "jest-environment-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmomtchev/documentation-polyglot.git"
+  },
+  "keywords": [
+    "documentation",
+    "js",
+    "jsdoc",
+    "polyglot",
+    "c++",
+    "node-addon",
+    "node-nan",
+    "node-addon-api"
+  ],
+  "author": "Momtchil Momtchev <momtchil@momtchev.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmomtchev/documentation-polyglot/issues"
+  },
+  "homepage": "https://github.com/mmomtchev/documentation-polyglot#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "documentation": "github:mmomtchev/documentation#plugin-framework",
+    "jest": "^27.4.2",
+    "remark": "^14.0.2"
+  }
+}
