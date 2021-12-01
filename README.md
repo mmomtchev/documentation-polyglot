@@ -1,4 +1,4 @@
-# polyglot documentation.js
+# documentation-polyglot.js
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/documentationjs/documentation/master/.github/documentation-js-logo.png" width="650" />
@@ -26,7 +26,7 @@ It is currently slightly above the level of the old `--polyglot` CLI option of `
 
 The project should already be usable.
 
-It uses *dumb* parsing without an AST extracting blindly extracting JSDoc-compliant comment blocks.
+It uses *dumb* parsing without an AST blindly extracting JSDoc-compliant comment blocks.
 
 I intend to add extensible helpers allowing to extract some (*C++ is notoriously difficult to parse and this aims to be an universal extractor anyways*) information from the C++ code.
 
