@@ -8,6 +8,8 @@
   The documentation system for modern JavaScript
 </p>
 
+***When good engineers meet, they discuss algorithms, but when great engineers meet, they discuss documentation***
+
 [![License: ISC](https://img.shields.io/github/license/mmomtchev/documentation-polyglot)](https://github.com/mmomtchev/documentation-polyglot/blob/master/LICENSE)
 [![Node.js CI](https://github.com/mmomtchev/documentation-polyglot/actions/workflows/node.js.yml/badge.svg)](https://github.com/mmomtchev/documentation-polyglot/actions/workflows/node.js.yml)
 [![codecov](https://codecov.io/gh/mmomtchev/documentation-polyglot/branch/master/graph/badge.svg?token=NUOEAMLXG2)](https://codecov.io/gh/mmomtchev/documentation-polyglot)
