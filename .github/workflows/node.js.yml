@@ -28,3 +28,21 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run test-ci
+
+
+  codecov:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - run: npm ci
+    - run: npm run c8
+    - run: npm run lcov
+    - run: npm run codecov
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

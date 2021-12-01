@@ -6,7 +6,10 @@
   "type": "module",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "test-ci": "node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand"
+    "test-ci": "node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand",
+    "c8": "npx c8 node --experimental-specifier-resolution=node --no-warnings test/test.js",
+    "lcov": "npx c8 report --reporter=text-lcov > coverage/tests.lcov",
+    "codecov": "curl -s https://codecov.io/bash | bash"
   },
   "jest": {
     "testPathIgnorePatterns": [
