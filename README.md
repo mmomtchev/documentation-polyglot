@@ -22,7 +22,7 @@ This plugin restores the C++ support for `documentation.js`.
 npm install -D git+https://github.com/mmomtchev/documentation.git#plugin-framework
 ```
 
-It is currently slightly above the level of the old `--polyglot` CLI option of `documentation.js` that got axed in 2017.
+It is an improved version of the old `--polyglot` CLI option of `documentation.js` that got axed in 2017.
 
 The project should already be usable.
 
