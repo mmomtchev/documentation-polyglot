@@ -64,7 +64,7 @@ function getComments(source) {
  * @param api documentation hooks
  * @return {Array<Object>} adds to memo
  */
-export function parse(sourceFile, config, api) {
+export function parse(sourceFile, _config, api) {
     if (!pluginConfig.extensions.includes(path.extname(sourceFile.file)))
         return false;
 
@@ -87,7 +87,8 @@ export function parse(sourceFile, config, api) {
  * @param config documentation configuration
  * @param api documentation hooks
  */
-export function shallow(file, config, api) {
+// eslint-disable-next-line no-unused-vars
+export function shallow(file, _config, _api) {
     if (pluginConfig.extensions.includes(path.extname(file)))
         return true;
     return false;
