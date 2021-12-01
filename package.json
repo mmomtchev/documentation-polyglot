@@ -43,7 +43,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "documentation": "github:mmomtchev/documentation#plugin-framework",
+    "documentation": "git+https://github.com/mmomtchev/documentation.git#plugin-framework",
     "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jest": "^25.3.0",
