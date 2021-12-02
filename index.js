@@ -10,6 +10,10 @@ const pluginConfig = defaultConfig;
 export function init(config) {
     if (config['documentation-polyglot'])
         Object.assign(pluginConfig, config['documentation-polyglot']);
+    if (config.shallow !== true) {
+        // polyglot implies --shallow
+        config.shallow = true;
+    }
 }
 
 /**
@@ -81,20 +85,6 @@ export function parse(sourceFile, config, api) {
             }
             return api.parseJSDoc(comment.value, comment.loc, context);
         });
-}
-
-/**
- * Is full dependency processing support for this type of file
- * 
- * @param {string} file 
- * @param config documentation configuration
- * @param api documentation hooks
- */
-// eslint-disable-next-line no-unused-vars
-export function shallow(file, _config, _api) {
-    if (pluginConfig.extensions.includes(path.extname(file)))
-        return true;
-    return false;
 }
 
 /**

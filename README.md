@@ -42,6 +42,8 @@ npm install -D git+https://github.com/mmomtchev/documentation-polyglot.git
 
 # Usage
 
+Note that enabling `documentation-polyglot` will also enable `--shallow` if this is not already the case.
+
 ## Loading via the command-line
 
 ```

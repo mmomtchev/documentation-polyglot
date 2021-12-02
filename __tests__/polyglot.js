@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { init, parse, shallow } from '../index.js';
+import { init, parse } from '../index.js';
 import { fileURLToPath } from 'url';
 
 import pluginAPI from 'documentation/src/plugin_api.js';
@@ -20,7 +20,6 @@ test('polyglot', function () {
   ];
   init(config);
 
-  expect(shallow(files[0])).toBeTruthy();
   const result = parse({
     file: files[0],
     source: fs.readFileSync(files[0], 'utf8')
@@ -96,7 +95,6 @@ test('polyglot', function () {
     }
   );
 
-  expect(shallow(files[1])).toBeFalsy();
   const jsresult = parse({
     file: files[1],
     source: fs.readFileSync(files[1], 'utf8')
