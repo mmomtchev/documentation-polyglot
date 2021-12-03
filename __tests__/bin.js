@@ -73,3 +73,10 @@ test('extracting information from Node::Nan annotations', async function () {
   ]);
   expect(normalize(data)).toMatchSnapshot();
 });
+
+test('extracting information from Node::Nan annotations w/ empty contexts', async function () {
+  const data = await documentation([
+    `build ${fixture}/gdal_algorithms.cpp --plugin=${plugin} --config=${fixture}/gdal.yml`
+  ]);
+  expect(normalize(data)).toMatchSnapshot();
+});

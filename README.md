@@ -77,6 +77,6 @@ documentation-polyglot:
   extensions: [ .cpp ]
   infer:
     kind:
-      method: [ NAN_METHOD\(.*\) ]
+      function: [ NAN_METHOD\(.*\) ]
     name: [ NAN_METHOD\s*\((.*)\) ]
 ```

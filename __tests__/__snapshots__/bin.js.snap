@@ -535,6 +535,4799 @@ Array [
 ]
 `;
 
+exports[`extracting information from Node::Nan annotations w/ empty contexts 1`] = `
+Array [
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 128,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 106,
+        },
+      },
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Create vector contours from raster DEM.",
+            },
+          ],
+          "type": "paragraph",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "This algorithm will generate contour vectors for the input raster band on the
+requested set of contour levels. The vector contours are written to the
+passed in vector layer. Also, a NODATA value may be specified to identify
+pixels that should not be considered in contour line generation.",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "kind": "function",
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 128,
+      },
+      "start": Object {
+        "column": 3,
+        "line": 106,
+      },
+    },
+    "memberof": "gdal",
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "contourGenerate",
+    "namespace": ".contourGenerate",
+    "params": Array [
+      Object {
+        "lineNumber": 12,
+        "name": "options",
+        "properties": Array [
+          Object {
+            "lineNumber": 13,
+            "name": "options.src",
+            "title": "param",
+            "type": Object {
+              "name": "gdal.RasterBand",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "lineNumber": 14,
+            "name": "options.dst",
+            "title": "param",
+            "type": Object {
+              "name": "gdal.Layer",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "default": "0",
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "The \\"offset\\" relative to which contour intervals are applied. This is normally zero, but could be different. To generate 10m contours at 5, 15, 25, ... the offset would be 5.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 15,
+            "name": "options.offset",
+            "title": "param",
+            "type": Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "default": "100",
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "The elevation interval between contours generated.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 16,
+            "name": "options.interval",
+            "title": "param",
+            "type": Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "A list of fixed contour levels at which contours should be generated. Overrides interval/base options if set.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 17,
+            "name": "options.fixedLevels",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "applications": Array [
+                  Object {
+                    "name": "number",
+                    "type": "NameExpression",
+                  },
+                ],
+                "expression": Object {
+                  "name": "Array",
+                  "type": "NameExpression",
+                },
+                "type": "TypeApplication",
+              },
+              "type": "OptionalType",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "The value to use as a \\"nodata\\" value. That is, a pixel value which should be ignored in generating contours as if the value of the pixel were not known.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 18,
+            "name": "options.nodata",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "name": "number",
+                "type": "NameExpression",
+              },
+              "type": "OptionalType",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "A field index to indicate where a unique id should be written for each feature (contour) written.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 19,
+            "name": "options.idField",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "name": "number",
+                "type": "NameExpression",
+              },
+              "type": "OptionalType",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "A field index to indicate where the elevation value of the contour should be written.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 20,
+            "name": "options.elevField",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "name": "number",
+                "type": "NameExpression",
+              },
+              "type": "OptionalType",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "{{{progress_cb}}}",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 21,
+            "name": "options.progress_cb",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "name": "ProgressCb",
+                "type": "NameExpression",
+              },
+              "type": "OptionalType",
+            },
+          },
+        ],
+        "title": "param",
+        "type": Object {
+          "name": "ContourOptions",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "path": Array [
+      Object {
+        "kind": "function",
+        "name": "contourGenerate",
+        "scope": "static",
+      },
+    ],
+    "properties": Array [],
+    "returns": Array [],
+    "scope": "static",
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": "Error",
+        "lineNumber": 8,
+        "title": "throws",
+        "type": null,
+      },
+      Object {
+        "description": null,
+        "lineNumber": 9,
+        "name": "contourGenerate",
+        "title": "method",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 10,
+        "title": "static",
+      },
+      Object {
+        "description": "gdal",
+        "lineNumber": 11,
+        "title": "memberof",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 12,
+        "name": "options",
+        "title": "param",
+        "type": Object {
+          "name": "ContourOptions",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 13,
+        "name": "options.src",
+        "title": "param",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 14,
+        "name": "options.dst",
+        "title": "param",
+        "type": Object {
+          "name": "gdal.Layer",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "0",
+        "description": "The \\"offset\\" relative to which contour intervals are applied. This is normally zero, but could be different. To generate 10m contours at 5, 15, 25, ... the offset would be 5.",
+        "lineNumber": 15,
+        "name": "options.offset",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "default": "100",
+        "description": "The elevation interval between contours generated.",
+        "lineNumber": 16,
+        "name": "options.interval",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "A list of fixed contour levels at which contours should be generated. Overrides interval/base options if set.",
+        "lineNumber": 17,
+        "name": "options.fixedLevels",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "applications": Array [
+              Object {
+                "name": "number",
+                "type": "NameExpression",
+              },
+            ],
+            "expression": Object {
+              "name": "Array",
+              "type": "NameExpression",
+            },
+            "type": "TypeApplication",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "The value to use as a \\"nodata\\" value. That is, a pixel value which should be ignored in generating contours as if the value of the pixel were not known.",
+        "lineNumber": 18,
+        "name": "options.nodata",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "A field index to indicate where a unique id should be written for each feature (contour) written.",
+        "lineNumber": 19,
+        "name": "options.idField",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "A field index to indicate where the elevation value of the contour should be written.",
+        "lineNumber": 20,
+        "name": "options.elevField",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "{{{progress_cb}}}",
+        "lineNumber": 21,
+        "name": "options.progress_cb",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "ProgressCb",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+    ],
+    "throws": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "Error",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+      },
+    ],
+    "todos": Array [],
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "kind": "function",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 155,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 130,
+        },
+      },
+      "name": "contourGenerate",
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Create vector contours from raster DEM.
+{{{async}}}",
+            },
+          ],
+          "type": "paragraph",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "This algorithm will generate contour vectors for the input raster band on the
+requested set of contour levels. The vector contours are written to the
+passed in vector layer. Also, a NODATA value may be specified to identify
+pixels that should not be considered in contour line generation.",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "kind": "function",
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 155,
+      },
+      "start": Object {
+        "column": 3,
+        "line": 130,
+      },
+    },
+    "memberof": "gdal",
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "contourGenerateAsync",
+    "namespace": ".contourGenerateAsync",
+    "params": Array [
+      Object {
+        "lineNumber": 13,
+        "name": "options",
+        "properties": Array [
+          Object {
+            "lineNumber": 14,
+            "name": "options.src",
+            "title": "param",
+            "type": Object {
+              "name": "gdal.RasterBand",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "lineNumber": 15,
+            "name": "options.dst",
+            "title": "param",
+            "type": Object {
+              "name": "gdal.Layer",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "default": "0",
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "The \\"offset\\" relative to which contour intervals are applied. This is normally zero, but could be different. To generate 10m contours at 5, 15, 25, ... the offset would be 5.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 16,
+            "name": "options.offset",
+            "title": "param",
+            "type": Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "default": "100",
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "The elevation interval between contours generated.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 17,
+            "name": "options.interval",
+            "title": "param",
+            "type": Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "A list of fixed contour levels at which contours should be generated. Overrides interval/base options if set.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 18,
+            "name": "options.fixedLevels",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "applications": Array [
+                  Object {
+                    "name": "number",
+                    "type": "NameExpression",
+                  },
+                ],
+                "expression": Object {
+                  "name": "Array",
+                  "type": "NameExpression",
+                },
+                "type": "TypeApplication",
+              },
+              "type": "OptionalType",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "The value to use as a \\"nodata\\" value. That is, a pixel value which should be ignored in generating contours as if the value of the pixel were not known.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 19,
+            "name": "options.nodata",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "name": "number",
+                "type": "NameExpression",
+              },
+              "type": "OptionalType",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "A field index to indicate where a unique id should be written for each feature (contour) written.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 20,
+            "name": "options.idField",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "name": "number",
+                "type": "NameExpression",
+              },
+              "type": "OptionalType",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "A field index to indicate where the elevation value of the contour should be written.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 21,
+            "name": "options.elevField",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "name": "number",
+                "type": "NameExpression",
+              },
+              "type": "OptionalType",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "{{{progress_cb}}}",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 22,
+            "name": "options.progress_cb",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "name": "ProgressCb",
+                "type": "NameExpression",
+              },
+              "type": "OptionalType",
+            },
+          },
+        ],
+        "title": "param",
+        "type": Object {
+          "name": "ContourOptions",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "undefined",
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "{{{cb}}}",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "lineNumber": 23,
+        "name": "callback",
+        "title": "param",
+        "type": Object {
+          "applications": Array [
+            Object {
+              "name": "void",
+              "type": "NameExpression",
+            },
+          ],
+          "expression": Object {
+            "name": "callback",
+            "type": "NameExpression",
+          },
+          "type": "TypeApplication",
+        },
+      },
+    ],
+    "path": Array [
+      Object {
+        "kind": "function",
+        "name": "contourGenerateAsync",
+        "scope": "static",
+      },
+    ],
+    "properties": Array [],
+    "returns": Array [
+      Object {
+        "description": Object {
+          "children": Array [],
+          "type": "root",
+        },
+        "title": "returns",
+        "type": Object {
+          "applications": Array [
+            Object {
+              "name": "void",
+              "type": "NameExpression",
+            },
+          ],
+          "expression": Object {
+            "name": "Promise",
+            "type": "NameExpression",
+          },
+          "type": "TypeApplication",
+        },
+      },
+    ],
+    "scope": "static",
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": "Error",
+        "lineNumber": 9,
+        "title": "throws",
+        "type": null,
+      },
+      Object {
+        "description": null,
+        "lineNumber": 10,
+        "name": "contourGenerateAsync",
+        "title": "method",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 11,
+        "title": "static",
+      },
+      Object {
+        "description": "gdal",
+        "lineNumber": 12,
+        "title": "memberof",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 13,
+        "name": "options",
+        "title": "param",
+        "type": Object {
+          "name": "ContourOptions",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 14,
+        "name": "options.src",
+        "title": "param",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 15,
+        "name": "options.dst",
+        "title": "param",
+        "type": Object {
+          "name": "gdal.Layer",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "0",
+        "description": "The \\"offset\\" relative to which contour intervals are applied. This is normally zero, but could be different. To generate 10m contours at 5, 15, 25, ... the offset would be 5.",
+        "lineNumber": 16,
+        "name": "options.offset",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "default": "100",
+        "description": "The elevation interval between contours generated.",
+        "lineNumber": 17,
+        "name": "options.interval",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "A list of fixed contour levels at which contours should be generated. Overrides interval/base options if set.",
+        "lineNumber": 18,
+        "name": "options.fixedLevels",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "applications": Array [
+              Object {
+                "name": "number",
+                "type": "NameExpression",
+              },
+            ],
+            "expression": Object {
+              "name": "Array",
+              "type": "NameExpression",
+            },
+            "type": "TypeApplication",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "The value to use as a \\"nodata\\" value. That is, a pixel value which should be ignored in generating contours as if the value of the pixel were not known.",
+        "lineNumber": 19,
+        "name": "options.nodata",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "A field index to indicate where a unique id should be written for each feature (contour) written.",
+        "lineNumber": 20,
+        "name": "options.idField",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "A field index to indicate where the elevation value of the contour should be written.",
+        "lineNumber": 21,
+        "name": "options.elevField",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "{{{progress_cb}}}",
+        "lineNumber": 22,
+        "name": "options.progress_cb",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "ProgressCb",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "default": "undefined",
+        "description": "{{{cb}}}",
+        "lineNumber": 23,
+        "name": "callback",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "applications": Array [
+              Object {
+                "name": "void",
+                "type": "NameExpression",
+              },
+            ],
+            "expression": Object {
+              "name": "callback",
+              "type": "NameExpression",
+            },
+            "type": "TypeApplication",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 24,
+        "title": "return",
+        "type": Object {
+          "applications": Array [
+            Object {
+              "name": "void",
+              "type": "NameExpression",
+            },
+          ],
+          "expression": Object {
+            "name": "Promise",
+            "type": "NameExpression",
+          },
+          "type": "TypeApplication",
+        },
+      },
+    ],
+    "throws": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "Error",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+      },
+    ],
+    "todos": Array [],
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 26,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 19,
+        },
+      },
+    },
+    "description": "",
+    "examples": Array [],
+    "implements": Array [],
+    "kind": "typedef",
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 26,
+      },
+      "start": Object {
+        "column": 3,
+        "line": 19,
+      },
+    },
+    "memberof": "gdal",
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "FillOptions",
+    "namespace": "FillOptions",
+    "params": Array [],
+    "path": Array [
+      Object {
+        "kind": "typedef",
+        "name": "FillOptions",
+      },
+    ],
+    "properties": Array [
+      Object {
+        "lineNumber": 3,
+        "name": "src",
+        "title": "property",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "lineNumber": 4,
+        "name": "mask",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "gdal.RasterBand",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "lineNumber": 5,
+        "name": "searchDist",
+        "title": "property",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "lineNumber": 6,
+        "name": "smoothingIterations",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+    ],
+    "returns": Array [],
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": null,
+        "lineNumber": 1,
+        "name": "FillOptions",
+        "title": "typedef",
+        "type": Object {
+          "name": "object",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": "gdal",
+        "lineNumber": 2,
+        "title": "memberof",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 3,
+        "name": "src",
+        "title": "property",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 4,
+        "name": "mask",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "gdal.RasterBand",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 5,
+        "name": "searchDist",
+        "title": "property",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 6,
+        "name": "smoothingIterations",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+    ],
+    "throws": Array [],
+    "todos": Array [],
+    "type": Object {
+      "name": "object",
+      "type": "NameExpression",
+    },
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 246,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 237,
+        },
+      },
+    },
+    "description": "",
+    "examples": Array [],
+    "implements": Array [],
+    "kind": "typedef",
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 246,
+      },
+      "start": Object {
+        "column": 3,
+        "line": 237,
+      },
+    },
+    "memberof": "gdal",
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "SieveOptions",
+    "namespace": "SieveOptions",
+    "params": Array [],
+    "path": Array [
+      Object {
+        "kind": "typedef",
+        "name": "SieveOptions",
+      },
+    ],
+    "properties": Array [
+      Object {
+        "lineNumber": 3,
+        "name": "src",
+        "title": "property",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "lineNumber": 4,
+        "name": "dst",
+        "title": "property",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "lineNumber": 5,
+        "name": "mask",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "gdal.RasterBand",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "lineNumber": 6,
+        "name": "threshold",
+        "title": "property",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "lineNumber": 7,
+        "name": "connectedness",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "lineNumber": 8,
+        "name": "progress_cb",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "ProgressCb",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+    ],
+    "returns": Array [],
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": null,
+        "lineNumber": 1,
+        "name": "SieveOptions",
+        "title": "typedef",
+        "type": Object {
+          "name": "object",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": "gdal",
+        "lineNumber": 2,
+        "title": "memberof",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 3,
+        "name": "src",
+        "title": "property",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 4,
+        "name": "dst",
+        "title": "property",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 5,
+        "name": "mask",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "gdal.RasterBand",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 6,
+        "name": "threshold",
+        "title": "property",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 7,
+        "name": "connectedness",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 8,
+        "name": "progress_cb",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "ProgressCb",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+    ],
+    "throws": Array [],
+    "todos": Array [],
+    "type": Object {
+      "name": "object",
+      "type": "NameExpression",
+    },
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 262,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 248,
+        },
+      },
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Removes small raster polygons.",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "kind": "function",
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 262,
+      },
+      "start": Object {
+        "column": 3,
+        "line": 248,
+      },
+    },
+    "memberof": "gdal",
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "sieveFilter",
+    "namespace": ".sieveFilter",
+    "params": Array [
+      Object {
+        "lineNumber": 7,
+        "name": "options",
+        "properties": Array [
+          Object {
+            "lineNumber": 8,
+            "name": "options.src",
+            "title": "param",
+            "type": Object {
+              "name": "gdal.RasterBand",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Output raster band. It may be the same as src band to update the source in place.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 9,
+            "name": "options.dst",
+            "title": "param",
+            "type": Object {
+              "name": "gdal.RasterBand",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "All pixels in the mask band with a value other than zero will be considered suitable for inclusion in polygons.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 10,
+            "name": "options.mask",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "name": "gdal.RasterBand",
+                "type": "NameExpression",
+              },
+              "type": "OptionalType",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Raster polygons with sizes smaller than this will be merged into their largest neighbour.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 11,
+            "name": "options.threshold",
+            "title": "param",
+            "type": Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "default": "4",
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Either 4 indicating that diagonal pixels are not considered directly adjacent for polygon membership purposes or 8 indicating they are.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 12,
+            "name": "options.connectedness",
+            "title": "param",
+            "type": Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "{{{progress_cb}}}",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 13,
+            "name": "options.progress_cb",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "name": "ProgressCb",
+                "type": "NameExpression",
+              },
+              "type": "OptionalType",
+            },
+          },
+        ],
+        "title": "param",
+        "type": Object {
+          "name": "SieveOptions",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "path": Array [
+      Object {
+        "kind": "function",
+        "name": "sieveFilter",
+        "scope": "static",
+      },
+    ],
+    "properties": Array [],
+    "returns": Array [],
+    "scope": "static",
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": "Error",
+        "lineNumber": 3,
+        "title": "throws",
+        "type": null,
+      },
+      Object {
+        "description": null,
+        "lineNumber": 4,
+        "name": "sieveFilter",
+        "title": "method",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 5,
+        "title": "static",
+      },
+      Object {
+        "description": "gdal",
+        "lineNumber": 6,
+        "title": "memberof",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 7,
+        "name": "options",
+        "title": "param",
+        "type": Object {
+          "name": "SieveOptions",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 8,
+        "name": "options.src",
+        "title": "param",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": "Output raster band. It may be the same as src band to update the source in place.",
+        "lineNumber": 9,
+        "name": "options.dst",
+        "title": "param",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": "All pixels in the mask band with a value other than zero will be considered suitable for inclusion in polygons.",
+        "lineNumber": 10,
+        "name": "options.mask",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "gdal.RasterBand",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "Raster polygons with sizes smaller than this will be merged into their largest neighbour.",
+        "lineNumber": 11,
+        "name": "options.threshold",
+        "title": "param",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "4",
+        "description": "Either 4 indicating that diagonal pixels are not considered directly adjacent for polygon membership purposes or 8 indicating they are.",
+        "lineNumber": 12,
+        "name": "options.connectedness",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "{{{progress_cb}}}",
+        "lineNumber": 13,
+        "name": "options.progress_cb",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "ProgressCb",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+    ],
+    "throws": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "Error",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+      },
+    ],
+    "todos": Array [],
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "kind": "function",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 281,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 264,
+        },
+      },
+      "name": "sieveFilter",
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Removes small raster polygons.
+{{{async}}}",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "kind": "function",
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 281,
+      },
+      "start": Object {
+        "column": 3,
+        "line": 264,
+      },
+    },
+    "memberof": "gdal",
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "sieveFilterAsync",
+    "namespace": ".sieveFilterAsync",
+    "params": Array [
+      Object {
+        "lineNumber": 8,
+        "name": "options",
+        "properties": Array [
+          Object {
+            "lineNumber": 9,
+            "name": "options.src",
+            "title": "param",
+            "type": Object {
+              "name": "gdal.RasterBand",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Output raster band. It may be the same as src band to update the source in place.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 10,
+            "name": "options.dst",
+            "title": "param",
+            "type": Object {
+              "name": "gdal.RasterBand",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "All pixels in the mask band with a value other than zero will be considered suitable for inclusion in polygons.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 11,
+            "name": "options.mask",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "name": "gdal.RasterBand",
+                "type": "NameExpression",
+              },
+              "type": "OptionalType",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Raster polygons with sizes smaller than this will be merged into their largest neighbour.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 12,
+            "name": "options.threshold",
+            "title": "param",
+            "type": Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "default": "4",
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Either 4 indicating that diagonal pixels are not considered directly adjacent for polygon membership purposes or 8 indicating they are.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 13,
+            "name": "options.connectedness",
+            "title": "param",
+            "type": Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "{{{progress_cb}}}",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 14,
+            "name": "options.progress_cb",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "name": "ProgressCb",
+                "type": "NameExpression",
+              },
+              "type": "OptionalType",
+            },
+          },
+        ],
+        "title": "param",
+        "type": Object {
+          "name": "SieveOptions",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "undefined",
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "{{{cb}}}",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "lineNumber": 15,
+        "name": "callback",
+        "title": "param",
+        "type": Object {
+          "applications": Array [
+            Object {
+              "name": "void",
+              "type": "NameExpression",
+            },
+          ],
+          "expression": Object {
+            "name": "callback",
+            "type": "NameExpression",
+          },
+          "type": "TypeApplication",
+        },
+      },
+    ],
+    "path": Array [
+      Object {
+        "kind": "function",
+        "name": "sieveFilterAsync",
+        "scope": "static",
+      },
+    ],
+    "properties": Array [],
+    "returns": Array [
+      Object {
+        "description": Object {
+          "children": Array [],
+          "type": "root",
+        },
+        "title": "returns",
+        "type": Object {
+          "applications": Array [
+            Object {
+              "name": "void",
+              "type": "NameExpression",
+            },
+          ],
+          "expression": Object {
+            "name": "Promise",
+            "type": "NameExpression",
+          },
+          "type": "TypeApplication",
+        },
+      },
+    ],
+    "scope": "static",
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": "Error",
+        "lineNumber": 4,
+        "title": "throws",
+        "type": null,
+      },
+      Object {
+        "description": null,
+        "lineNumber": 5,
+        "name": "sieveFilterAsync",
+        "title": "method",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 6,
+        "title": "static",
+      },
+      Object {
+        "description": "gdal",
+        "lineNumber": 7,
+        "title": "memberof",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 8,
+        "name": "options",
+        "title": "param",
+        "type": Object {
+          "name": "SieveOptions",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 9,
+        "name": "options.src",
+        "title": "param",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": "Output raster band. It may be the same as src band to update the source in place.",
+        "lineNumber": 10,
+        "name": "options.dst",
+        "title": "param",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": "All pixels in the mask band with a value other than zero will be considered suitable for inclusion in polygons.",
+        "lineNumber": 11,
+        "name": "options.mask",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "gdal.RasterBand",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "Raster polygons with sizes smaller than this will be merged into their largest neighbour.",
+        "lineNumber": 12,
+        "name": "options.threshold",
+        "title": "param",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "4",
+        "description": "Either 4 indicating that diagonal pixels are not considered directly adjacent for polygon membership purposes or 8 indicating they are.",
+        "lineNumber": 13,
+        "name": "options.connectedness",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "{{{progress_cb}}}",
+        "lineNumber": 14,
+        "name": "options.progress_cb",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "ProgressCb",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "default": "undefined",
+        "description": "{{{cb}}}",
+        "lineNumber": 15,
+        "name": "callback",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "applications": Array [
+              Object {
+                "name": "void",
+                "type": "NameExpression",
+              },
+            ],
+            "expression": Object {
+              "name": "callback",
+              "type": "NameExpression",
+            },
+            "type": "TypeApplication",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 16,
+        "title": "return",
+        "type": Object {
+          "applications": Array [
+            Object {
+              "name": "void",
+              "type": "NameExpression",
+            },
+          ],
+          "expression": Object {
+            "name": "Promise",
+            "type": "NameExpression",
+          },
+          "type": "TypeApplication",
+        },
+      },
+    ],
+    "throws": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "Error",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+      },
+    ],
+    "todos": Array [],
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 40,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 28,
+        },
+      },
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Fill raster regions by interpolation from edges.",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "kind": "function",
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 40,
+      },
+      "start": Object {
+        "column": 3,
+        "line": 28,
+      },
+    },
+    "memberof": "gdal",
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "fillNodata",
+    "namespace": ".fillNodata",
+    "params": Array [
+      Object {
+        "lineNumber": 7,
+        "name": "options",
+        "properties": Array [
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "This band to be updated in-place.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 8,
+            "name": "options.src",
+            "title": "param",
+            "type": Object {
+              "name": "gdal.RasterBand",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Mask band",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 9,
+            "name": "options.mask",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "name": "gdal.RasterBand",
+                "type": "NameExpression",
+              },
+              "type": "OptionalType",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "The maximum distance (in pixels) that the algorithm will search out for values to interpolate.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 10,
+            "name": "options.searchDist",
+            "title": "param",
+            "type": Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "default": "0",
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "The number of 3x3 average filter smoothing iterations to run after the interpolation to dampen artifacts.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 11,
+            "name": "options.smoothingIterations",
+            "title": "param",
+            "type": Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          },
+        ],
+        "title": "param",
+        "type": Object {
+          "name": "FillOptions",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "path": Array [
+      Object {
+        "kind": "function",
+        "name": "fillNodata",
+        "scope": "static",
+      },
+    ],
+    "properties": Array [],
+    "returns": Array [],
+    "scope": "static",
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": "Error",
+        "lineNumber": 3,
+        "title": "throws",
+        "type": null,
+      },
+      Object {
+        "description": null,
+        "lineNumber": 4,
+        "name": "fillNodata",
+        "title": "method",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 5,
+        "title": "static",
+      },
+      Object {
+        "description": "gdal",
+        "lineNumber": 6,
+        "title": "memberof",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 7,
+        "name": "options",
+        "title": "param",
+        "type": Object {
+          "name": "FillOptions",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": "This band to be updated in-place.",
+        "lineNumber": 8,
+        "name": "options.src",
+        "title": "param",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": "Mask band",
+        "lineNumber": 9,
+        "name": "options.mask",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "gdal.RasterBand",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "The maximum distance (in pixels) that the algorithm will search out for values to interpolate.",
+        "lineNumber": 10,
+        "name": "options.searchDist",
+        "title": "param",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "0",
+        "description": "The number of 3x3 average filter smoothing iterations to run after the interpolation to dampen artifacts.",
+        "lineNumber": 11,
+        "name": "options.smoothingIterations",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+    ],
+    "throws": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "Error",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+      },
+    ],
+    "todos": Array [],
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 346,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 333,
+        },
+      },
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Compute checksum for image region.",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "kind": "function",
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 346,
+      },
+      "start": Object {
+        "column": 3,
+        "line": 333,
+      },
+    },
+    "memberof": "gdal",
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "checksumImage",
+    "namespace": ".checksumImage",
+    "params": Array [
+      Object {
+        "lineNumber": 7,
+        "name": "src",
+        "title": "param",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "0",
+        "lineNumber": 8,
+        "name": "x",
+        "title": "param",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "0",
+        "lineNumber": 9,
+        "name": "y",
+        "title": "param",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "src.width",
+        "lineNumber": 10,
+        "name": "w",
+        "title": "param",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "src.height",
+        "lineNumber": 11,
+        "name": "h",
+        "title": "param",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "path": Array [
+      Object {
+        "kind": "function",
+        "name": "checksumImage",
+        "scope": "static",
+      },
+    ],
+    "properties": Array [],
+    "returns": Array [
+      Object {
+        "description": Object {
+          "children": Array [],
+          "type": "root",
+        },
+        "title": "returns",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "scope": "static",
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": "Error",
+        "lineNumber": 3,
+        "title": "throws",
+        "type": null,
+      },
+      Object {
+        "description": null,
+        "lineNumber": 4,
+        "name": "checksumImage",
+        "title": "method",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 5,
+        "title": "static",
+      },
+      Object {
+        "description": "gdal",
+        "lineNumber": 6,
+        "title": "memberof",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 7,
+        "name": "src",
+        "title": "param",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "0",
+        "description": null,
+        "lineNumber": 8,
+        "name": "x",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "default": "0",
+        "description": null,
+        "lineNumber": 9,
+        "name": "y",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "default": "src.width",
+        "description": null,
+        "lineNumber": 10,
+        "name": "w",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "default": "src.height",
+        "description": null,
+        "lineNumber": 11,
+        "name": "h",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 12,
+        "title": "return",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "throws": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "Error",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+      },
+    ],
+    "todos": Array [],
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "kind": "function",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 363,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 348,
+        },
+      },
+      "name": "checksumImage",
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Compute checksum for image region.",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "kind": "function",
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 363,
+      },
+      "start": Object {
+        "column": 3,
+        "line": 348,
+      },
+    },
+    "memberof": "gdal",
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "checksumImageAsync",
+    "namespace": ".checksumImageAsync",
+    "params": Array [
+      Object {
+        "lineNumber": 7,
+        "name": "src",
+        "title": "param",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "0",
+        "lineNumber": 8,
+        "name": "x",
+        "title": "param",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "0",
+        "lineNumber": 9,
+        "name": "y",
+        "title": "param",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "src.width",
+        "lineNumber": 10,
+        "name": "w",
+        "title": "param",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "src.height",
+        "lineNumber": 11,
+        "name": "h",
+        "title": "param",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "undefined",
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "{{{cb}}}",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "lineNumber": 12,
+        "name": "callback",
+        "title": "param",
+        "type": Object {
+          "applications": Array [
+            Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          ],
+          "expression": Object {
+            "name": "callback",
+            "type": "NameExpression",
+          },
+          "type": "TypeApplication",
+        },
+      },
+    ],
+    "path": Array [
+      Object {
+        "kind": "function",
+        "name": "checksumImageAsync",
+        "scope": "static",
+      },
+    ],
+    "properties": Array [],
+    "returns": Array [
+      Object {
+        "description": Object {
+          "children": Array [],
+          "type": "root",
+        },
+        "title": "returns",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": Object {
+          "children": Array [],
+          "type": "root",
+        },
+        "title": "returns",
+        "type": Object {
+          "applications": Array [
+            Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          ],
+          "expression": Object {
+            "name": "Promise",
+            "type": "NameExpression",
+          },
+          "type": "TypeApplication",
+        },
+      },
+    ],
+    "scope": "static",
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": "Error",
+        "lineNumber": 3,
+        "title": "throws",
+        "type": null,
+      },
+      Object {
+        "description": null,
+        "lineNumber": 4,
+        "name": "checksumImageAsync",
+        "title": "method",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 5,
+        "title": "static",
+      },
+      Object {
+        "description": "gdal",
+        "lineNumber": 6,
+        "title": "memberof",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 7,
+        "name": "src",
+        "title": "param",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "0",
+        "description": null,
+        "lineNumber": 8,
+        "name": "x",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "default": "0",
+        "description": null,
+        "lineNumber": 9,
+        "name": "y",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "default": "src.width",
+        "description": null,
+        "lineNumber": 10,
+        "name": "w",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "default": "src.height",
+        "description": null,
+        "lineNumber": 11,
+        "name": "h",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "default": "undefined",
+        "description": "{{{cb}}}",
+        "lineNumber": 12,
+        "name": "callback",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "applications": Array [
+              Object {
+                "name": "number",
+                "type": "NameExpression",
+              },
+            ],
+            "expression": Object {
+              "name": "callback",
+              "type": "NameExpression",
+            },
+            "type": "TypeApplication",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 13,
+        "title": "return",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 14,
+        "title": "return",
+        "type": Object {
+          "applications": Array [
+            Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          ],
+          "expression": Object {
+            "name": "Promise",
+            "type": "NameExpression",
+          },
+          "type": "TypeApplication",
+        },
+      },
+    ],
+    "throws": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "Error",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+      },
+    ],
+    "todos": Array [],
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 417,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 407,
+        },
+      },
+    },
+    "description": "",
+    "examples": Array [],
+    "implements": Array [],
+    "kind": "typedef",
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 417,
+      },
+      "start": Object {
+        "column": 3,
+        "line": 407,
+      },
+    },
+    "memberof": "gdal",
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "PolygonizeOptions",
+    "namespace": "PolygonizeOptions",
+    "params": Array [],
+    "path": Array [
+      Object {
+        "kind": "typedef",
+        "name": "PolygonizeOptions",
+      },
+    ],
+    "properties": Array [
+      Object {
+        "lineNumber": 3,
+        "name": "src",
+        "title": "property",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "lineNumber": 4,
+        "name": "dst",
+        "title": "property",
+        "type": Object {
+          "name": "gdal.Layer",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "lineNumber": 5,
+        "name": "mask",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "gdal.RasterBand",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "The attribute field index indicating the feature attribute into which the pixel value of the polygon should be written.",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "lineNumber": 6,
+        "name": "pixValField",
+        "title": "property",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "Either 4 indicating that diagonal pixels are not considered directly adjacent for polygon membership purposes or 8 indicating they are.",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "lineNumber": 7,
+        "name": "connectedness",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "Use floating point buffers instead of int buffers.",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "lineNumber": 8,
+        "name": "useFloats",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "boolean",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "{{{progress_cb}}}",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "lineNumber": 9,
+        "name": "progress_cb",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "ProgressCb",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+    ],
+    "returns": Array [],
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": null,
+        "lineNumber": 1,
+        "name": "PolygonizeOptions",
+        "title": "typedef",
+        "type": Object {
+          "name": "object",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": "gdal",
+        "lineNumber": 2,
+        "title": "memberof",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 3,
+        "name": "src",
+        "title": "property",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 4,
+        "name": "dst",
+        "title": "property",
+        "type": Object {
+          "name": "gdal.Layer",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 5,
+        "name": "mask",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "gdal.RasterBand",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "The attribute field index indicating the feature attribute into which the pixel value of the polygon should be written.",
+        "lineNumber": 6,
+        "name": "pixValField",
+        "title": "property",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "4",
+        "description": "Either 4 indicating that diagonal pixels are not considered directly adjacent for polygon membership purposes or 8 indicating they are.",
+        "lineNumber": 7,
+        "name": "connectedness",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "default": "false",
+        "description": "Use floating point buffers instead of int buffers.",
+        "lineNumber": 8,
+        "name": "useFloats",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "boolean",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "{{{progress_cb}}}",
+        "lineNumber": 9,
+        "name": "progress_cb",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "ProgressCb",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+    ],
+    "throws": Array [],
+    "todos": Array [],
+    "type": Object {
+      "name": "object",
+      "type": "NameExpression",
+    },
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 437,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 419,
+        },
+      },
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Creates vector polygons for all connected regions of pixels in the raster
+sharing a common pixel value. Each polygon is created with an attribute
+indicating the pixel value of that polygon. A raster mask may also be
+provided to determine which pixels are eligible for processing.",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "kind": "function",
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 437,
+      },
+      "start": Object {
+        "column": 3,
+        "line": 419,
+      },
+    },
+    "memberof": "gdal",
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "polygonize",
+    "namespace": ".polygonize",
+    "params": Array [
+      Object {
+        "lineNumber": 10,
+        "name": "options",
+        "properties": Array [
+          Object {
+            "lineNumber": 11,
+            "name": "options.src",
+            "title": "param",
+            "type": Object {
+              "name": "gdal.RasterBand",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "lineNumber": 12,
+            "name": "options.dst",
+            "title": "param",
+            "type": Object {
+              "name": "gdal.Layer",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "lineNumber": 13,
+            "name": "options.mask",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "name": "gdal.RasterBand",
+                "type": "NameExpression",
+              },
+              "type": "OptionalType",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "The attribute field index indicating the feature attribute into which the pixel value of the polygon should be written.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 14,
+            "name": "options.pixValField",
+            "title": "param",
+            "type": Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "default": "4",
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Either 4 indicating that diagonal pixels are not considered directly adjacent for polygon membership purposes or 8 indicating they are.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 15,
+            "name": "options.connectedness",
+            "title": "param",
+            "type": Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "default": "false",
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Use floating point buffers instead of int buffers.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 16,
+            "name": "options.useFloats",
+            "title": "param",
+            "type": Object {
+              "name": "boolean",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "{{{progress_cb}}}",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 17,
+            "name": "options.progress_cb",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "name": "ProgressCb",
+                "type": "NameExpression",
+              },
+              "type": "OptionalType",
+            },
+          },
+        ],
+        "title": "param",
+        "type": Object {
+          "name": "PolygonizeOptions",
+          "type": "NameExpression",
+        },
+      },
+    ],
+    "path": Array [
+      Object {
+        "kind": "function",
+        "name": "polygonize",
+        "scope": "static",
+      },
+    ],
+    "properties": Array [],
+    "returns": Array [],
+    "scope": "static",
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": "Error",
+        "lineNumber": 6,
+        "title": "throws",
+        "type": null,
+      },
+      Object {
+        "description": null,
+        "lineNumber": 7,
+        "name": "polygonize",
+        "title": "method",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 8,
+        "title": "static",
+      },
+      Object {
+        "description": "gdal",
+        "lineNumber": 9,
+        "title": "memberof",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 10,
+        "name": "options",
+        "title": "param",
+        "type": Object {
+          "name": "PolygonizeOptions",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 11,
+        "name": "options.src",
+        "title": "param",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 12,
+        "name": "options.dst",
+        "title": "param",
+        "type": Object {
+          "name": "gdal.Layer",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 13,
+        "name": "options.mask",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "gdal.RasterBand",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "The attribute field index indicating the feature attribute into which the pixel value of the polygon should be written.",
+        "lineNumber": 14,
+        "name": "options.pixValField",
+        "title": "param",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "4",
+        "description": "Either 4 indicating that diagonal pixels are not considered directly adjacent for polygon membership purposes or 8 indicating they are.",
+        "lineNumber": 15,
+        "name": "options.connectedness",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "default": "false",
+        "description": "Use floating point buffers instead of int buffers.",
+        "lineNumber": 16,
+        "name": "options.useFloats",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "boolean",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "{{{progress_cb}}}",
+        "lineNumber": 17,
+        "name": "options.progress_cb",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "ProgressCb",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+    ],
+    "throws": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "Error",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+      },
+    ],
+    "todos": Array [],
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "kind": "function",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 57,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 42,
+        },
+      },
+      "name": "fillNodata",
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Fill raster regions by interpolation from edges.
+{{{async}}}",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "kind": "function",
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 57,
+      },
+      "start": Object {
+        "column": 3,
+        "line": 42,
+      },
+    },
+    "memberof": "gdal",
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "fillNodataAsync",
+    "namespace": ".fillNodataAsync",
+    "params": Array [
+      Object {
+        "lineNumber": 8,
+        "name": "options",
+        "properties": Array [
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "This band to be updated in-place.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 9,
+            "name": "options.src",
+            "title": "param",
+            "type": Object {
+              "name": "gdal.RasterBand",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Mask band",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 10,
+            "name": "options.mask",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "name": "gdal.RasterBand",
+                "type": "NameExpression",
+              },
+              "type": "OptionalType",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "The maximum distance (in pixels) that the algorithm will search out for values to interpolate.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 11,
+            "name": "options.searchDist",
+            "title": "param",
+            "type": Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "default": "0",
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "The number of 3x3 average filter smoothing iterations to run after the interpolation to dampen artifacts.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 12,
+            "name": "options.smoothingIterations",
+            "title": "param",
+            "type": Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          },
+        ],
+        "title": "param",
+        "type": Object {
+          "name": "FillOptions",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "undefined",
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "{{{cb}}}",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "lineNumber": 13,
+        "name": "callback",
+        "title": "param",
+        "type": Object {
+          "applications": Array [
+            Object {
+              "name": "void",
+              "type": "NameExpression",
+            },
+          ],
+          "expression": Object {
+            "name": "callback",
+            "type": "NameExpression",
+          },
+          "type": "TypeApplication",
+        },
+      },
+    ],
+    "path": Array [
+      Object {
+        "kind": "function",
+        "name": "fillNodataAsync",
+        "scope": "static",
+      },
+    ],
+    "properties": Array [],
+    "returns": Array [
+      Object {
+        "description": Object {
+          "children": Array [],
+          "type": "root",
+        },
+        "title": "returns",
+        "type": Object {
+          "applications": Array [
+            Object {
+              "name": "void",
+              "type": "NameExpression",
+            },
+          ],
+          "expression": Object {
+            "name": "Promise",
+            "type": "NameExpression",
+          },
+          "type": "TypeApplication",
+        },
+      },
+    ],
+    "scope": "static",
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": "Error",
+        "lineNumber": 4,
+        "title": "throws",
+        "type": null,
+      },
+      Object {
+        "description": null,
+        "lineNumber": 5,
+        "name": "fillNodataAsync",
+        "title": "method",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 6,
+        "title": "static",
+      },
+      Object {
+        "description": "gdal",
+        "lineNumber": 7,
+        "title": "memberof",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 8,
+        "name": "options",
+        "title": "param",
+        "type": Object {
+          "name": "FillOptions",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": "This band to be updated in-place.",
+        "lineNumber": 9,
+        "name": "options.src",
+        "title": "param",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": "Mask band",
+        "lineNumber": 10,
+        "name": "options.mask",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "gdal.RasterBand",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "The maximum distance (in pixels) that the algorithm will search out for values to interpolate.",
+        "lineNumber": 11,
+        "name": "options.searchDist",
+        "title": "param",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "0",
+        "description": "The number of 3x3 average filter smoothing iterations to run after the interpolation to dampen artifacts.",
+        "lineNumber": 12,
+        "name": "options.smoothingIterations",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "default": "undefined",
+        "description": "{{{cb}}}",
+        "lineNumber": 13,
+        "name": "callback",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "applications": Array [
+              Object {
+                "name": "void",
+                "type": "NameExpression",
+              },
+            ],
+            "expression": Object {
+              "name": "callback",
+              "type": "NameExpression",
+            },
+            "type": "TypeApplication",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 14,
+        "title": "return",
+        "type": Object {
+          "applications": Array [
+            Object {
+              "name": "void",
+              "type": "NameExpression",
+            },
+          ],
+          "expression": Object {
+            "name": "Promise",
+            "type": "NameExpression",
+          },
+          "type": "TypeApplication",
+        },
+      },
+    ],
+    "throws": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "Error",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+      },
+    ],
+    "todos": Array [],
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "kind": "function",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 460,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 439,
+        },
+      },
+      "name": "polygonize",
+    },
+    "description": Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Creates vector polygons for all connected regions of pixels in the raster
+sharing a common pixel value. Each polygon is created with an attribute
+indicating the pixel value of that polygon. A raster mask may also be
+provided to determine which pixels are eligible for processing.
+{{{async}}}",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "type": "root",
+    },
+    "examples": Array [],
+    "implements": Array [],
+    "kind": "function",
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 460,
+      },
+      "start": Object {
+        "column": 3,
+        "line": 439,
+      },
+    },
+    "memberof": "gdal",
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "polygonizeAsync",
+    "namespace": ".polygonizeAsync",
+    "params": Array [
+      Object {
+        "lineNumber": 11,
+        "name": "options",
+        "properties": Array [
+          Object {
+            "lineNumber": 12,
+            "name": "options.src",
+            "title": "param",
+            "type": Object {
+              "name": "gdal.RasterBand",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "lineNumber": 13,
+            "name": "options.dst",
+            "title": "param",
+            "type": Object {
+              "name": "gdal.Layer",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "lineNumber": 14,
+            "name": "options.mask",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "name": "gdal.RasterBand",
+                "type": "NameExpression",
+              },
+              "type": "OptionalType",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "The attribute field index indicating the feature attribute into which the pixel value of the polygon should be written.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 15,
+            "name": "options.pixValField",
+            "title": "param",
+            "type": Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "default": "4",
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Either 4 indicating that diagonal pixels are not considered directly adjacent for polygon membership purposes or 8 indicating they are.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 16,
+            "name": "options.connectedness",
+            "title": "param",
+            "type": Object {
+              "name": "number",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "default": "false",
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Use floating point buffers instead of int buffers.",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 17,
+            "name": "options.useFloats",
+            "title": "param",
+            "type": Object {
+              "name": "boolean",
+              "type": "NameExpression",
+            },
+          },
+          Object {
+            "description": Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "{{{progress_cb}}}",
+                    },
+                  ],
+                  "type": "paragraph",
+                },
+              ],
+              "type": "root",
+            },
+            "lineNumber": 18,
+            "name": "options.progress_cb",
+            "title": "param",
+            "type": Object {
+              "expression": Object {
+                "name": "ProgressCb",
+                "type": "NameExpression",
+              },
+              "type": "OptionalType",
+            },
+          },
+        ],
+        "title": "param",
+        "type": Object {
+          "name": "PolygonizeOptions",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "undefined",
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "{{{cb}}}",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+        "lineNumber": 19,
+        "name": "callback",
+        "title": "param",
+        "type": Object {
+          "applications": Array [
+            Object {
+              "name": "void",
+              "type": "NameExpression",
+            },
+          ],
+          "expression": Object {
+            "name": "callback",
+            "type": "NameExpression",
+          },
+          "type": "TypeApplication",
+        },
+      },
+    ],
+    "path": Array [
+      Object {
+        "kind": "function",
+        "name": "polygonizeAsync",
+        "scope": "static",
+      },
+    ],
+    "properties": Array [],
+    "returns": Array [
+      Object {
+        "description": Object {
+          "children": Array [],
+          "type": "root",
+        },
+        "title": "returns",
+        "type": Object {
+          "applications": Array [
+            Object {
+              "name": "void",
+              "type": "NameExpression",
+            },
+          ],
+          "expression": Object {
+            "name": "Promise",
+            "type": "NameExpression",
+          },
+          "type": "TypeApplication",
+        },
+      },
+    ],
+    "scope": "static",
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": "Error",
+        "lineNumber": 7,
+        "title": "throws",
+        "type": null,
+      },
+      Object {
+        "description": null,
+        "lineNumber": 8,
+        "name": "polygonizeAsync",
+        "title": "method",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 9,
+        "title": "static",
+      },
+      Object {
+        "description": "gdal",
+        "lineNumber": 10,
+        "title": "memberof",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 11,
+        "name": "options",
+        "title": "param",
+        "type": Object {
+          "name": "PolygonizeOptions",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 12,
+        "name": "options.src",
+        "title": "param",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 13,
+        "name": "options.dst",
+        "title": "param",
+        "type": Object {
+          "name": "gdal.Layer",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 14,
+        "name": "options.mask",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "gdal.RasterBand",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "The attribute field index indicating the feature attribute into which the pixel value of the polygon should be written.",
+        "lineNumber": 15,
+        "name": "options.pixValField",
+        "title": "param",
+        "type": Object {
+          "name": "number",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "default": "4",
+        "description": "Either 4 indicating that diagonal pixels are not considered directly adjacent for polygon membership purposes or 8 indicating they are.",
+        "lineNumber": 16,
+        "name": "options.connectedness",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "default": "false",
+        "description": "Use floating point buffers instead of int buffers.",
+        "lineNumber": 17,
+        "name": "options.useFloats",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "boolean",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": "{{{progress_cb}}}",
+        "lineNumber": 18,
+        "name": "options.progress_cb",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "name": "ProgressCb",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "default": "undefined",
+        "description": "{{{cb}}}",
+        "lineNumber": 19,
+        "name": "callback",
+        "title": "param",
+        "type": Object {
+          "expression": Object {
+            "applications": Array [
+              Object {
+                "name": "void",
+                "type": "NameExpression",
+              },
+            ],
+            "expression": Object {
+              "name": "callback",
+              "type": "NameExpression",
+            },
+            "type": "TypeApplication",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 20,
+        "title": "return",
+        "type": Object {
+          "applications": Array [
+            Object {
+              "name": "void",
+              "type": "NameExpression",
+            },
+          ],
+          "expression": Object {
+            "name": "Promise",
+            "type": "NameExpression",
+          },
+          "type": "TypeApplication",
+        },
+      },
+    ],
+    "throws": Array [
+      Object {
+        "description": Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "type": "text",
+                  "value": "Error",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "type": "root",
+        },
+      },
+    ],
+    "todos": Array [],
+    "yields": Array [],
+  },
+  Object {
+    "augments": Array [],
+    "context": Object {
+      "file": "[path]",
+      "loc": Object {
+        "end": Object {
+          "column": 2,
+          "line": 104,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 92,
+        },
+      },
+    },
+    "description": "",
+    "examples": Array [],
+    "implements": Array [],
+    "kind": "typedef",
+    "loc": Object {
+      "end": Object {
+        "column": 2,
+        "line": 104,
+      },
+      "start": Object {
+        "column": 3,
+        "line": 92,
+      },
+    },
+    "memberof": "gdal",
+    "members": Object {
+      "events": Array [],
+      "global": Array [],
+      "inner": Array [],
+      "instance": Array [],
+      "static": Array [],
+    },
+    "name": "ContourOptions",
+    "namespace": "ContourOptions",
+    "params": Array [],
+    "path": Array [
+      Object {
+        "kind": "typedef",
+        "name": "ContourOptions",
+      },
+    ],
+    "properties": Array [
+      Object {
+        "lineNumber": 3,
+        "name": "src",
+        "title": "property",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "lineNumber": 4,
+        "name": "dst",
+        "title": "property",
+        "type": Object {
+          "name": "gdal.Layer",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "lineNumber": 5,
+        "name": "offset",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "lineNumber": 6,
+        "name": "interval",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "lineNumber": 7,
+        "name": "fixedLevels",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "applications": Array [
+              Object {
+                "name": "number",
+                "type": "NameExpression",
+              },
+            ],
+            "expression": Object {
+              "name": "Array",
+              "type": "NameExpression",
+            },
+            "type": "TypeApplication",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "lineNumber": 8,
+        "name": "nodata",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "lineNumber": 9,
+        "name": "idField",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "lineNumber": 10,
+        "name": "elevField",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "lineNumber": 11,
+        "name": "progress_cb",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "ProgressCb",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+    ],
+    "returns": Array [],
+    "sees": Array [],
+    "tags": Array [
+      Object {
+        "description": null,
+        "lineNumber": 1,
+        "name": "ContourOptions",
+        "title": "typedef",
+        "type": Object {
+          "name": "object",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": "gdal",
+        "lineNumber": 2,
+        "title": "memberof",
+      },
+      Object {
+        "description": null,
+        "lineNumber": 3,
+        "name": "src",
+        "title": "property",
+        "type": Object {
+          "name": "gdal.RasterBand",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 4,
+        "name": "dst",
+        "title": "property",
+        "type": Object {
+          "name": "gdal.Layer",
+          "type": "NameExpression",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 5,
+        "name": "offset",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 6,
+        "name": "interval",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 7,
+        "name": "fixedLevels",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "applications": Array [
+              Object {
+                "name": "number",
+                "type": "NameExpression",
+              },
+            ],
+            "expression": Object {
+              "name": "Array",
+              "type": "NameExpression",
+            },
+            "type": "TypeApplication",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 8,
+        "name": "nodata",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 9,
+        "name": "idField",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 10,
+        "name": "elevField",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "number",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+      Object {
+        "description": null,
+        "lineNumber": 11,
+        "name": "progress_cb",
+        "title": "property",
+        "type": Object {
+          "expression": Object {
+            "name": "ProgressCb",
+            "type": "NameExpression",
+          },
+          "type": "OptionalType",
+        },
+      },
+    ],
+    "throws": Array [],
+    "todos": Array [],
+    "type": Object {
+      "name": "object",
+      "type": "NameExpression",
+    },
+    "yields": Array [],
+  },
+]
+`;
+
 exports[`specifying extensions in a config file 1`] = `
 Array [
   Object {

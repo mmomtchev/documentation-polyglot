@@ -40,7 +40,7 @@ function getComments(source) {
         throw new TypeError('getComments expects a string');
     const res = [];
     for (const comment of source.matchAll(
-        /\/\*(\*\s(\*(?!\/)|[^*])*)\*\/\s*(.*)/g
+        /\/\*(\*\s(\*(?!\/)|[^*])*)\*\/\s*([^/]*)/g
     )) {
         const obj = {
             after: comment[3],
