@@ -8,7 +8,7 @@ const defaultConfig = {
 const pluginConfig = defaultConfig;
 
 export function init(config) {
-    if (config['documentation-polyglot'])
+    if (config && config['documentation-polyglot'])
         Object.assign(pluginConfig, config['documentation-polyglot']);
     if (config.shallow !== true) {
         // polyglot implies --shallow

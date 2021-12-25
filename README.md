@@ -18,10 +18,10 @@
 
 This plugin restores the C++ support for `documentation.js`.
 
-**It requires a plugin framework in `documentation.js` that has yet to be merged**. You can install it from Github:
+**It requires a plugin framework in `documentation.js` that has yet to be merged**. You can install it from here:
 
 ```
-npm install -D git+https://github.com/mmomtchev/documentation.git#plugin-framework
+npm install -D @mmomtchev/documentation
 ```
 
 It is an improved version of the old `--polyglot` CLI option of `documentation.js` that got axed in 2017.
@@ -37,7 +37,7 @@ I intend to add extensible helpers allowing to extract some (*C++ is notoriously
 The module is not yet published
 
 ```
-npm install -D git+https://github.com/mmomtchev/documentation-polyglot.git
+npm install -D documentation-polyglot
 ```
 
 # Usage
@@ -80,3 +80,7 @@ documentation-polyglot:
       function: [ NAN_METHOD\(.*\) ]
     name: [ NAN_METHOD\s*\((.*)\) ]
 ```
+
+An `infer` section applies an implicit JSDoc tag to the tag having the section name:
+ * with subsections it will apply the subsection name when one of the provided REs matches.
+ * with only REs it will apply the first capture group

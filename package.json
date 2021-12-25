@@ -7,6 +7,9 @@
   "scripts": {
     "test": "eslint . && node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test-ci": "eslint . && node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand",
+    "preversion": "npm run test",
+    "version": "git add package.json",
+    "postversion": "git push && git push --tags",
     "c8": "npx c8 node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "lcov": "npx c8 report --reporter=text-lcov > coverage/tests.lcov",
     "codecov": "curl -s https://codecov.io/bash | bash"
