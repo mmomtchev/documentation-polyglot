@@ -3,9 +3,9 @@ import * as path from 'path';
 import { init, parse } from '../index.js';
 import { fileURLToPath } from 'url';
 
-import pluginAPI from 'documentation/src/plugin_api.js';
+import pluginAPI from '@mmomtchev/documentation/src/plugin_api.js';
 import { remark } from 'remark';
-import removePosition from 'documentation/src/remark-remove-position.js';
+import removePosition from '@mmomtchev/documentation/src/remark-remove-position.js';
 const remarkParse = remark().use(removePosition).parse;
 
 const __filename = fileURLToPath(import.meta.url);
