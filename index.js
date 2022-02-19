@@ -83,7 +83,7 @@ export function parse(sourceFile, config, api) {
             if (config && config['documentation-polyglot'] && config['documentation-polyglot'].infer) {
                 Object.assign(context, infer(comment.after, config));
             }
-            return api.parseJSDoc(comment.value, comment.loc, context);
+            return api.parseJSDoc(comment.value, comment.loc, context, config);
         });
 }
 
