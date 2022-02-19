@@ -1,6 +1,6 @@
 {
   "name": "documentation-polyglot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "C++ plugin for documentation.js",
   "main": "index.js",
   "type": "module",
