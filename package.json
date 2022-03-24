@@ -48,7 +48,7 @@
   "devDependencies": {
     "@mmomtchev/documentation": "^14.0.1",
     "eslint": "^8.10.0",
-    "eslint-config-prettier": "^8.4.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest": "^25.7.0",
     "jest": "^27.5.1",
     "prettier": "^2.5.1",
