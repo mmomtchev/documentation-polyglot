@@ -51,7 +51,7 @@
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-jest": "^25.7.0",
     "jest": "^27.5.1",
-    "prettier": "^2.8.1",
+    "prettier": "^2.8.2",
     "remark": "^14.0.2"
   }
 }
